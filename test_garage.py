@@ -51,3 +51,9 @@ def test_get_available_spots_works():
     }
     assert get_available_spots(new_garage) == 3
 
+def test_get_available_spots_no_negative_returns():
+    new_garage = {
+    "capacity": 2,   # total number of spots
+    "cars": {"FJC5751", "FJC5752","FJC5753"}         # car_id -> entry_hour (int)
+    }
+    assert get_available_spots(new_garage) == 0
