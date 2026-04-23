@@ -33,7 +33,7 @@ def test_exit_garage_carid_not_in():
     with pytest.raises(KeyError):
         exit_garage(new_garage, "FJC57588")
 
-def test_exit_garage_carid_works():
+def test_exit_garage_works():
     new_garage = {
     "capacity": 4,   # total number of spots
     "cars": {"FJC5751", "FJC5752","FJC5753"}         # car_id -> entry_hour (int)
