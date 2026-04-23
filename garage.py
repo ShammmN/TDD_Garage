@@ -1,5 +1,6 @@
 def enter_garage(garage, car_id, entry_hour):
-    pass
+    if car_id in garage.values():
+        raise ValueError("Car is already in garage!")
 
 def exit_garage(garage, car_id):
     pass
