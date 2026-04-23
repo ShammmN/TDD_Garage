@@ -9,3 +9,10 @@ def test_enter_garage_carid_in_garage():
     with pytest.raises(ValueError):
         enter_garage(new_garage, "FJC5751", 7)
 
+def test_enter_garage_full():
+    new_garage = {
+    "capacity": 4,   # total number of spots
+    "cars": {"FJC5751", "FJC5752","FJC5753","FJC5754"}         # car_id -> entry_hour (int)
+    }
+    with pytest.raises(ValueError):
+        enter_garage(new_garage, "FJC57588", 7)
