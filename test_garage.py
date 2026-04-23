@@ -23,4 +23,4 @@ def test_enter_garage_entry_int():
     "cars": {"FJC5751", "FJC5752","FJC5753"}         # car_id -> entry_hour (int)
     }
     with pytest.raises(TypeError):
-        enter_garage(new_garage, "FJC57588", "7"
+        enter_garage(new_garage, "FJC57588", "7")
