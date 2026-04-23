@@ -8,10 +8,13 @@ def enter_garage(garage, car_id, entry_hour):
 
     garage["cars"].append(car_id)
     return garage
-    
-def exit_garage(garage, car_id):
-    pass
 
+def exit_garage(garage, car_id):
+    if car_id not in garage["cars"]:
+        raise KeyError("Car is not in garage!")
+        
+    garge["cars"].pop(car_id)
+    return garage
 def get_available_spots(garage):
     pass
 
