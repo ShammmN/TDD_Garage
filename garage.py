@@ -15,6 +15,7 @@ def exit_garage(garage, car_id):
 
     garage["cars"].remove(car_id)
     return garage
+
 def get_available_spots(garage):
     pass
 
