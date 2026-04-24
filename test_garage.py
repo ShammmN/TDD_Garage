@@ -75,7 +75,7 @@ def test_calculate_fee_works():
 @pytest.mark.paramterize("hours, rate, expected", {
     (1, 10, 10.0),
     (2, 10, 20.0),
-    (2.5, 5, 12.5)
+    (2.5, 5, 12.5),
 })
 
 def test_calculate_fee_paramterize(hours, rate, expected):
