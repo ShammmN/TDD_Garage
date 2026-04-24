@@ -93,3 +93,7 @@ def test_calculate_fee_invalid_hours():
 def test_calculate_fee_negative_rate():
     with pytest.raises(ValueError):
         calculate_fee(3,-5)  
+
+def test_calculate_fee_negative_hours():
+    with pytest.raises(ValueError):
+        calculate_fee(-4,5)  
