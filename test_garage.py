@@ -80,3 +80,8 @@ def test_calculate_fee_works():
 
 def test_calculate_fee_paramterize(hours, rate, expected):
     assert calculate_fee(hours, rate) == expected
+
+
+def test_calculate_fee_invalid_rate_type():
+    with pytest.raises(TypeError):
+        calculate_fee(2,"5")
