@@ -16,7 +16,7 @@ def test_enter_garage_works():
     }
     expected_garage = {
     "capacity": 4,   # total number of spots
-    "cars": {"FJC5752": 1,"FJC5799": 7}         # car_id -> entry_hour (int)
+    "cars": {"FJC5751": 1,"FJC5799": 7}         # car_id -> entry_hour (int)
     }
     assert enter_garage(new_garage, "FJC5799", 7) == expected_garage
 
