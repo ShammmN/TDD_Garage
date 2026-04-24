@@ -85,3 +85,11 @@ def test_calculate_fee_paramterize(hours, rate, expected):
 def test_calculate_fee_invalid_rate_type():
     with pytest.raises(TypeError):
         calculate_fee(2,"5")
+
+def test_calculate_fee_invalid_hours():
+    with pytest.raises(TypeError):
+        calculate_fee("2",5)  
+
+def test_calculate_fee_negative_rate():
+    with pytest.raises(ValueError):
+        calculate_fee(3,-5)  
