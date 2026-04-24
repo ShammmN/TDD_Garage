@@ -69,4 +69,5 @@ def test_get_available_spots_no_negative_returns():
     }
     assert get_available_spots(new_garage) == 0
 
-
+def test_calculate_fee_works():
+    assert calculate_fee(2, 5) == 10.0
