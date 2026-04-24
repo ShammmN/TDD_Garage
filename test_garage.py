@@ -72,10 +72,10 @@ def test_get_available_spots_no_negative_returns():
 def test_calculate_fee_works():
     assert calculate_fee(2, 5) == 10.0
 
-@pytest.mark.paramterize("hours, rate, expected", {
-    (1, 10, 10.0),
-    (2, 10, 20.0),
-    (2.5, 5, 12.5),
+@pytest.mark.parametrize("hours, rate, expected", {
+    [(1, 10, 10.0)],
+    [(2, 10, 20.0)],
+    [(2.5, 5, 12.5)],
 })
 
 def test_calculate_fee_paramterize(hours, rate, expected):
